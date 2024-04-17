@@ -1,11 +1,11 @@
 import pygame
 import sys
 
+
 from config import *
 
-
 class Window:
-  def __init__(self) -> None:
+  def __init__(self):
     pygame.init()
     self.screen = pygame.display.set_mode((WIDTH,HEIGHT))
     pygame.display.set_caption(f'{SIZE} X {SIZE} Tic Tac Toe!')
@@ -32,7 +32,7 @@ class Window:
           if e.type == pygame.MOUSEBUTTONDOWN: 
             coord = pygame.mouse.get_pos()
             pos = self.find_pos_form_coord(coord)
-            callback(pos)
+            callback(pos=pos)
 
 
   def find_pos_form_coord(self, coord):
@@ -44,6 +44,9 @@ class Window:
     pos = row * SIZE + col
     return pos
 
+  def disable_window(self):
+     pygame.event.set_blocked(pygame.MOUSEBUTTONDOWN)
+    
   def draw_symbol(self, player, pos):
       
       cell_width = WIDTH//SIZE
@@ -76,12 +79,3 @@ class Window:
       print()
       self.screen.blit(textsurface, (offset_x, offset_y))
       pygame.display.update()
-
-
-
-w = Window()
-def happend(pos):
-  print("clicked: ", pos)
-  w.draw_symbol(O, pos)
-
-w.listen(happend)
