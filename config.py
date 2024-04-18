@@ -1,7 +1,10 @@
 
 # game variables
-SIZE = 3
-
+SIZE = 4
+DEPTH = 4
+WIN = 1
+DRAW = 0
+CONT = -1
 # players
 X = 'X'
 O = 'O'

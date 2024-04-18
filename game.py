@@ -13,7 +13,8 @@ class Board:
     if pos < len(self.state) and self.state[pos] == EMPTY:
       self.state[pos] = player
       self.total_moves += 1
-      
+      self.curr_player = self.get_curr_player()
+
       return True
     return False
   
