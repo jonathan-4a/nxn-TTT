@@ -20,7 +20,7 @@ This is a Python implementation of the classic Tic Tac Toe game. The game allows
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/jonathan-4a/4x4-TTT
+   git clone https://github.com/jonathan-4a/nxn-TTT
 
 2. install dependencies
 ```bash
