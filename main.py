@@ -35,6 +35,7 @@ class Game:
   def start_game(self):
     self.w.listen(self.event)
 
+
 if __name__ == "__main__":
   g = Game()
   g.start_game()
