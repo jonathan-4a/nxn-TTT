@@ -12,7 +12,6 @@ class Game:
   
   def event(self, pos):
     curr_player = self.b.curr_player
-    print("curr P: ", curr_player)
     updated = self.b.update_board(curr_player, pos)
     if updated:
       self.w.draw_symbol(curr_player, pos)
@@ -25,8 +24,6 @@ class Game:
         print("Draw!")
       else:
         ai_move = self.ai.alphabeta(self.b,  float("-inf"), float("inf"), 0, self.b.get_curr_player())
-        
-        print("ai move", ai_move,self.b.get_curr_player())
         updated = self.b.update_board(self.b.get_curr_player(), ai_move[0])
         if updated:
           self.w.draw_symbol(O, ai_move[0])

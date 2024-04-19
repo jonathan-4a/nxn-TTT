@@ -1,6 +1,6 @@
 
 # Game Variables
-SIZE = 4
+SIZE = 5
 DEPTH = 5
 WIN = 1
 DRAW = 0
